@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace idioms
 {
@@ -20,8 +20,17 @@ namespace idioms
       idioms.Add("Lucifer", new List<string> { "Speak", "of", "the", "devil" });
 
 
-    
-    
+      foreach (KeyValuePair<string, List<string>> idiom in idioms)
+      {
+        string output = $"{idiom.Key}: ";
+        foreach (var word in idiom.Value)
+        {
+          output += $"{word} ";
+        }
+        Console.WriteLine(output);
+
+      }
+
     }
   }
 }
